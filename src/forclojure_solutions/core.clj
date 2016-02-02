@@ -111,3 +111,18 @@
 
 ; -------------------------------------------------------
 
+; http://www.4clojure.com/problem/28
+(defn my-flatten
+  "#28. Write a function which flattens a sequence."
+  [xs]
+  (filter (complement sequential?) (rest (tree-seq sequential? seq xs))))
+
+; -------------------------------------------------------
+
+; http://www.4clojure.com/problem/29
+(defn caps
+  "#29. Write a function which takes a string and returns a new string containing only the capital letters."
+  [xs]
+  (apply str (filter #(Character/isUpperCase %) xs)))
+
+; -------------------------------------------------------
